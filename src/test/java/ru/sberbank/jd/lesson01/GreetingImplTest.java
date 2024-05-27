@@ -34,7 +34,6 @@ public class GreetingImplTest {
     public void resultContainsCorrectPhone(){
         greet = new GreetingImpl();
         String regex = "[8|+7]\\d{10}";
-        Pattern pattern = Pattern.compile(regex);
         Assert.assertTrue(greet.getPhone().matches(regex));
     }
 
@@ -44,7 +43,7 @@ public class GreetingImplTest {
     @Test
     public void resultContainsCorrectReposUrl(){
         greet = new GreetingImpl();
-        String regex = "https://.+[.com|.ru|.net].+";
+        String regex = "https://.+[/.com|/.ru|/.net].+";
         Assert.assertTrue(greet.getRepoUrl().matches(regex));
     }
     /**
@@ -56,12 +55,19 @@ public class GreetingImplTest {
         Assert.assertEquals("P***n",greet.getLastName());
     }
     /**
-     * Проверка на корректность номера телефона
+     * Проверка возраста
      */
     @Test
     public void resultGetBirthYear(){
         greet = new GreetingImpl();
         Assert.assertEquals(30,greet.getBirthYear());
     }
-
+    /**
+     * Проверка на возраста
+     */
+    @Test
+    public void expectationsCountNotEmpty(){
+        greet = new GreetingImpl();
+        Assert.assertFalse(greet.getCourseExpectations().isEmpty());
+    }
 }
