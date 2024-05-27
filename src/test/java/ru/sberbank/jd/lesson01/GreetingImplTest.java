@@ -3,8 +3,6 @@ package ru.sberbank.jd.lesson01;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.regex.Pattern;
-
 /**
  * Unit test for simple App.
  */
