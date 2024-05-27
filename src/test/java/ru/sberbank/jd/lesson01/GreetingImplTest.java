@@ -45,7 +45,6 @@ public class GreetingImplTest {
     public void resultContainsCorrectReposUrl(){
         greet = new GreetingImpl();
         String regex = "https://.+[.com|.ru|.net].+";
-        Pattern pattern = Pattern.compile(regex);
         Assert.assertTrue(greet.getRepoUrl().matches(regex));
     }
     /**
