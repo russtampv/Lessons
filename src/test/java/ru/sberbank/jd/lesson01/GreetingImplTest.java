@@ -43,7 +43,7 @@ public class GreetingImplTest {
     @Test
     public void resultContainsCorrectReposUrl(){
         greet = new GreetingImpl();
-        String regex = "https://.+[/.com|/.ru|/.net].+";
+        String regex = "https://.+(.com|.ru|.net).+";
         Assert.assertTrue(greet.getRepoUrl().matches(regex));
     }
     /**
