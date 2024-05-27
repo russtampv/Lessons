@@ -23,7 +23,7 @@ public class GreetingImplTest {
      * Проверка на содеражние информации о персоне
      */
     @Test
-    public void resultContainsLastName(){
+    public void resultContainsFirstName(){
         greet = new GreetingImpl();
         Assert.assertTrue(greet.getFirstName().contains("Rustam"));
     }
@@ -47,6 +47,14 @@ public class GreetingImplTest {
         String regex = "https://.+[.com|.ru|.net].+";
         Pattern pattern = Pattern.compile(regex);
         Assert.assertTrue(greet.getRepoUrl().matches(regex));
+    }
+    /**
+     * Проверка на корректность номера телефона
+     */
+    @Test
+    public void resultContainsLastName(){
+        greet = new GreetingImpl();
+        Assert.assertEquals("P***n",greet.getLastName());
     }
 
 }

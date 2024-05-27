@@ -47,7 +47,7 @@ public class GreetingImpl implements Greeting {
      */
     @Override
     public String getPhone() {
-        return "89*****9021";
+        return "89826679021";
     }
     /**
      * Описание ожиданий от курса
