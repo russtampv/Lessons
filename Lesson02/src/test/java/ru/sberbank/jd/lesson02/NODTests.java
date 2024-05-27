@@ -30,4 +30,12 @@ public class NODTests {
         NOD nod = new NODImpl();
         Assert.assertEquals(5,nod.calculate(45,200));
     }
+    /**
+     * Проверка отработки при отрицательных числах
+     */
+    @Test
+    public void getNodByNegativeNumber(){
+        NOD nod = new NODImpl();
+        Assert.assertEquals(1,nod.calculate(-17,7));
+    }
 }
