@@ -55,5 +55,13 @@ public class GreetingImplTest {
         greet = new GreetingImpl();
         Assert.assertEquals("P***n",greet.getLastName());
     }
+    /**
+     * Проверка на корректность номера телефона
+     */
+    @Test
+    public void resultGetBirthYear(){
+        greet = new GreetingImpl();
+        Assert.assertEquals(30,greet.getBirthYear());
+    }
 
 }
