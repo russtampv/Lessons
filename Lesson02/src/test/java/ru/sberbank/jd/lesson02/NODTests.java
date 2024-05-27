@@ -1,7 +1,6 @@
 package ru.sberbank.jd.lesson02;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 /**
  * Класс тестирования класса NOD
